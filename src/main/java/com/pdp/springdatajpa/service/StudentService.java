@@ -4,6 +4,9 @@ import com.pdp.springdatajpa.entity.Gender;
 import com.pdp.springdatajpa.entity.Group;
 import com.pdp.springdatajpa.entity.Student;
 import com.pdp.springdatajpa.repository.StudentRepository;
+import com.pdp.springdatajpa.repository.StudentRepositoryPaging;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
 import java.sql.Date;
@@ -14,9 +17,11 @@ import java.util.Optional;
 @Service
 public class StudentService {
     private final StudentRepository studentRepository;
+    private final StudentRepositoryPaging studentRepositoryPaging;
 
-    public StudentService(StudentRepository studentRepository) {
+    public StudentService(StudentRepository studentRepository, StudentRepositoryPaging studentRepositoryPaging) {
         this.studentRepository = studentRepository;
+        this.studentRepositoryPaging = studentRepositoryPaging;
     }
 
     public List<Student> getStudentsByBirthDateRange(Date startDate, Date endDate) {
@@ -45,5 +50,10 @@ public class StudentService {
 
     public void deleteStudentById(Long id) {
         studentRepository.deleteById(id);
+    }
+
+    public Page<Student> getAllStudentsPaged(int pageNumber, int pageSize) {
+        PageRequest pageRequest = PageRequest.of(pageNumber, pageSize);
+        return studentRepositoryPaging.findAllWithPageable(pageRequest);
     }
 }

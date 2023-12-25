@@ -6,6 +6,7 @@ import com.pdp.springdatajpa.entity.Student;
 import com.pdp.springdatajpa.service.GroupService;
 import com.pdp.springdatajpa.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -77,5 +78,14 @@ public class StudentController {
         Group group = groupService.getGroupById(groupId);
         List<Student> studentsByGroup = studentService.getStudentsByGroup(group);
         return new ResponseEntity<>(studentsByGroup, HttpStatus.OK);
+    }
+
+    @GetMapping("/students")
+    public ResponseEntity<Page<Student>> getStudentsPaged(
+            @RequestParam(defaultValue = "0") int page,
+            @RequestParam(defaultValue = "10") int size
+    ) {
+        Page<Student> studentsPage = studentService.getAllStudentsPaged(page, size);
+        return ResponseEntity.ok(studentsPage);
     }
 }
