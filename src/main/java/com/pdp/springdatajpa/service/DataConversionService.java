@@ -37,7 +37,7 @@ public class DataConversionService {
             Student[] studentsArray = objectMapper.readValue(studentsFile, Student[].class);
             List<Student> students = Arrays.asList(studentsArray);
 
-            File groupsFile = new File("groups.json");
+            File groupsFile = new File("data/groups.json");
             Group[] groupsArray = objectMapper.readValue(groupsFile, Group[].class);
             List<Group> groups = Arrays.asList(groupsArray);
 

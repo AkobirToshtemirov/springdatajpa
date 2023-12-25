@@ -11,7 +11,7 @@ import java.util.List;
 @AllArgsConstructor
 @EqualsAndHashCode
 @Entity
-@Table(name = "GROUP")
+@Table(name = "student_info")
 public class Group {
 
     @Id

@@ -3,60 +3,60 @@
     "name": "Alice",
     "age": 20,
     "birthDate": "2002-03-15",
-    "gender": "WOMEN"
+    "gender": "WOMAN"
   },
   {
     "name": "Bob",
     "age": 22,
     "birthDate": "2000-09-25",
-    "gender": "MEN"
+    "gender": "MAN"
   },
   {
     "name": "Charlie",
     "age": 21,
     "birthDate": "2001-05-10",
-    "gender": "MEN"
+    "gender": "MAN"
   },
   {
     "name": "Daisy",
     "age": 19,
     "birthDate": "2003-11-07",
-    "gender": "WOMEN"
+    "gender": "WOMAN"
   },
   {
     "name": "Eleanor",
     "age": 20,
     "birthDate": "2002-08-12",
-    "gender": "WOMEN"
+    "gender": "WOMAN"
   },
   {
     "name": "Frank",
     "age": 22,
     "birthDate": "2000-02-28",
-    "gender": "MEN"
+    "gender": "MAN"
   },
   {
     "name": "Grace",
     "age": 19,
     "birthDate": "2003-06-18",
-    "gender": "WOMEN"
+    "gender": "WOMAN"
   },
   {
     "name": "Harry",
     "age": 21,
     "birthDate": "2001-12-05",
-    "gender": "MEN"
+    "gender": "MAN"
   },
   {
     "name": "Ivy",
     "age": 20,
     "birthDate": "2002-04-30",
-    "gender": "WOMEN"
+    "gender": "WOMAN"
   },
   {
     "name": "Jack",
     "age": 22,
     "birthDate": "2000-10-20",
-    "gender": "MEN"
+    "gender": "MAN"
   }
 ]
